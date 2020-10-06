@@ -1,36 +1,36 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
+        name: 'posts',
         path: `${__dirname}/src/posts/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
+        name: 'pages',
         path: `${__dirname}/src/pages/`,
       },
     },
 
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1200,
             },
@@ -39,14 +39,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `roboto mono`,
-          `muli\:300,400,400i,700`, // you can also specify font weights and styles
+          'roboto mono',
+          'muli:300,400,400i,700', // you can also specify font weights and styles
         ],
-        display: "swap",
+        display: 'swap',
       },
     },
   ],
-}
+};
