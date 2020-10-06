@@ -14,11 +14,28 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.66",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-mdx": "^1.2.43",
+    "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-plugin-styled-components": "^3.3.12",
+    "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-transformer-sharp": "^2.5.16",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "2.1.2"
   },
   "repository": {
