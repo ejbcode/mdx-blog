@@ -1,7 +1,7 @@
 // exports.createPages = async ({ actions, graphql }) => {
 //   const data = await graphql(`
 //     {
-//       allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+//       allMdx {
 //         edges {
 //           node {
 //             frontmatter {
@@ -16,7 +16,7 @@
 //   `);
 //   console.log('------');
 
-//   console.log(data);
+//   console.log(data.data.allMdx.edges.node.frontmatter);
 
 //   console.log('------');
 //   const postPerPage = 3;
@@ -35,13 +35,13 @@
 //   //   });
 //   // });
 
-//   // data.allMdx.edges.forEach((edge) => {
-//   //   const { slug } = edge.node.frontmatter;
-//   //   const { id } = edge.node;
-//   //   actions.createPage({
-//   //     path: slug,
-//   //     component: require.resolve('./src/components/demo.js'),
-//   //     context: { id },
-//   //   });
-//   // });
+//   data.allMdx.edges.forEach((edge) => {
+//     const { slug } = edge.node.frontmatter;
+//     const { id } = edge.node;
+//     actions.createPage({
+//       path: slug,
+//       component: require.resolve('./src/components/demo.js'),
+//       context: { id },
+//     });
+//   });
 // };
