@@ -11,7 +11,7 @@ export const NavWrapper = styled.nav`
   }
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    grid-columns: 2 span 6;
+    grid-column: 2 span 6;
   }
 `;
 

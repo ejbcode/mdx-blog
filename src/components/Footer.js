@@ -8,6 +8,7 @@ import {
   FooterWrapper,
   FooterSocialWrapper,
   FooterSocialIcons,
+  P,
 } from '../elements';
 
 export const Footer = () => (
@@ -39,7 +40,9 @@ export const Footer = () => (
           <AiOutlineTwitter />
         </a>
       </FooterSocialIcons>
-      <p>20202 </p>
+      <P size="xSmall" color="dark3">
+        20202{' '}
+      </P>
     </FooterSocialWrapper>
   </FooterWrapper>
 );
