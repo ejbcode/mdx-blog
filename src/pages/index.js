@@ -3,8 +3,8 @@ import { Container, FeaturedImage } from '../components';
 
 const IndexPage = () => (
   <Container>
-    <h1>Hello!</h1>
     <FeaturedImage />
+    <h1>Hello!!!</h1>
   </Container>
 );
 

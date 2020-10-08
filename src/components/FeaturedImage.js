@@ -18,11 +18,12 @@ export const FeaturedImage = ({ fixed }) => {
   console.log(data.imageSharp.fixed);
   return (
     <FeatureImageWrapper>
-      <p>sds</p>
+      <p>s</p>
       <Img
         fixed={fixed || data.imageSharp.fixed}
         style={{
           position: 'absolute',
+          background: 'red',
           left: 0,
           top: 0,
           width: '100%',

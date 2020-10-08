@@ -10,3 +10,7 @@ export const FeatureImageWrapper = styled.div`
     grid-column: 2 / span 6;
   }
 `;
+
+export const ShutupLinter = styled.div`
+  color: red;
+`;
