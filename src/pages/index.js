@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Content, ContentCard, Container, FeaturedImage } from '../components';
 
 const IndexPage = () => (
