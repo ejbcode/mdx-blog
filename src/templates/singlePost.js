@@ -5,13 +5,18 @@ import { H1 } from '../elements';
 import { Container, Post, FeaturedImage } from '../components';
 
 const singlePost = ({ data }) => {
-  // const featureImage = data.mdx.frontmatter.childImageSharp.fixed;
-  console.log('df');
+  const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
   return (
 
-    <div>
-      <p>{data.mdx.frontmatter.title}</p>
-    </div>
+    <Container>
+      <FeaturedImage fixed={featureImage} />
+      <Post>
+        <H1 textAlign="center" margin=" 0 0 2rem 0">
+          {data.mdx.frontmatter.title}
+        </H1>
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      </Post>
+    </Container>
   );
 };
 

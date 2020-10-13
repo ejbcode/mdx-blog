@@ -8,3 +8,5 @@ export * from './ContentElements';
 export * from './ButtonElements';
 export * from './PaginationElements';
 export * from './PostElements';
+export * from './TableElements';
+export * from './Code';
