@@ -1,32 +1,34 @@
 exports.createPages = async ({ actions, graphql }) => {
   const data = await graphql(`
-    {
-      allMdx {
-        edges {
-          node {
-            frontmatter {
-              slug
-              date
-              excerpt
-            }
+  {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+      edges {
+        node {
+          frontmatter {
+            slug
           }
+          id
         }
       }
     }
-  `);
-  console.log('------');
+  }
+`);
 
-  console.log(data.data.allMdx.edges.node.frontmatter);
+  // hg
+  console.log('----');
 
-  console.log('------');
+  console.log(data);
+  console.log('*****');
+
   const postPerPage = 3;
-  const numPages = Math.ceil(data.allMdx.edges.length / postPerPage);
-  console.log(numPages);
+
+  const numPages = Math.ceil(data.data.allMdx.edges.length / postPerPage);
+
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
       path: i === 0 ? '/' : `/${i + 1}`,
       component: require.resolve('./src/templates/allPosts.js'),
-      comtext: {
+      context: {
         limit: postPerPage,
         skip: i * postPerPage,
         numPages,
@@ -35,13 +37,13 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   });
 
-  // data.allMdx.edges.forEach((edge) => {
-  //   const { slug } = edge.node.frontmatter;
-  //   const { id } = edge.node;
-  //   actions.createPage({
-  //     path: slug,
-  //     component: require.resolve('./src/components/demo.js'),
-  //     context: { id },
-  //   });
-  // });
+  data.data.allMdx.edges.forEach((edge) => {
+    const { slug } = edge.node.frontmatter;
+    const { id } = edge.node;
+    actions.createPage({
+      path: slug,
+      component: require.resolve('./src/templates/singlePost.js'),
+      context: { id },
+    });
+  });
 };
